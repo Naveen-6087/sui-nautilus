@@ -1,0 +1,14 @@
+[package]
+name = "intent_executor"
+edition = "2024.beta"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet-v1.46.1" }
+enclave = { local = "../enclave" }
+seal_policy = { local = "../../sui-tma/sui-tma/move/seal_policy" }
+intent_registry = { local = "../../sui-tma/sui-tma/move/intent_registry" }
+
+[addresses]
+intent_executor = "0x0"
+enclave = "0x0"
+sui = "0x2"
